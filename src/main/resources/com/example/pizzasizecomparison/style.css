@@ -1,0 +1,12 @@
+.root{
+    -fx-background-image: url(images/background.png);
+    -fx-background-size: cover;
+}
+#header{
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+}
+.button{
+    -fx-border-radius: 20pt;
+    -fx-background-radius: 20pt;
+}

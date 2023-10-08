@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pizzasizecomparison.TableViewController">
+   <children>
+      <Button fx:id="buttonPressed" layoutX="389.0" layoutY="459.0" mnemonicParsing="false" text="Chart view" />
+   </children>
+</AnchorPane>
