@@ -5,12 +5,10 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="500.0" prefWidth="800.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pizzasizecomparison.ChartViewController">
+<AnchorPane prefHeight="500.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pizzasizecomparison.ChartViewController">
    <children>
-      <PieChart layoutX="48.0" layoutY="52.0" prefHeight="375.0" prefWidth="333.0" title="Pizza Hut" />
-      <PieChart layoutX="431.0" layoutY="52.0" prefHeight="375.0" prefWidth="333.0" title="GodFather's Pizza" />
-      <Label fx:id="header" alignment="TOP_CENTER" layoutX="246.0" layoutY="12.0" text="Pizza size comparison of two pizzerias" />
-      <Button fx:id="buttonPressed" layoutX="379.0" layoutY="453.0" mnemonicParsing="false" text="Table view" />
+      <PieChart layoutX="203.0" layoutY="66.0" prefHeight="375.0" prefWidth="333.0" title="GodFather's Pizza" />
+      <Label fx:id="header" alignment="TOP_CENTER" layoutX="132.0" layoutY="20.0" text="Pizza sold according to size of GodFather's Pizzeria" />
+      <Button fx:id="buttonPressed" layoutX="334.0" layoutY="457.0" mnemonicParsing="false" text="Table view" />
    </children>
 </AnchorPane>

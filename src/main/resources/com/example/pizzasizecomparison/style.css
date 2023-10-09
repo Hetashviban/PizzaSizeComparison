@@ -1,6 +1,7 @@
 .root{
     -fx-background-image: url(images/background.png);
     -fx-background-size: cover;
+    -fx-font-size: 11pt;
 }
 #header{
     -fx-font-size: 20px;
