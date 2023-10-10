@@ -8,9 +8,9 @@ public class DBUtility {
     private static String password = "S9dEYkOlPx";
     private static String connectURL = "jdbc:mysql://172.31.22.43:3306/pizza_data";
 
-    /*This method will return a list of GodFathers data from the database */
-    public static ArrayList<PizzaSold> getGodfathersSizesFromDB(){
-        ArrayList<PizzaSold> godFathers = new ArrayList<>();
+    /*This method will return a list of GodFathers Pizza data from the database */
+    public static ArrayList<Pizza> getGodfathersPizzaSizesFromDB(){
+        ArrayList<Pizza> godFathers = new ArrayList<>();
 
         String sql = "SELECT * FROM godfathers_data";
 
@@ -24,10 +24,11 @@ public class DBUtility {
         {
             while (resultSet.next()) //.next will point at the next row
             {
-                String nameGodF = resultSet.getString("Pizza Name");
-                String typeGodF = resultSet.getString("Type");
-                String sizeGodF = resultSet.getString("Size");
-                float priceGodF = resultSet.getFloat("Price");
+                String pizzaName = resultSet.getString("Pizza Name");
+                String pizzaType = resultSet.getString("Type");
+                String pizzaSize = resultSet.getString("Size");
+                float pizzaPrice = resultSet.getFloat("Price");
+                Pizza pizzas = new Pizza(pizzaName,pizzaType,pizzaSize,pizzaPrice);
             }
         }
         catch (Exception e)
