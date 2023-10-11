@@ -13,7 +13,7 @@
       <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="700.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label fx:id="header" prefHeight="30.0" prefWidth="115.0" text="Table View" />
-            <TableView prefHeight="351.0" prefWidth="640.0">
+            <TableView fx:id="tableView" prefHeight="351.0" prefWidth="640.0">
               <columns>
                 <TableColumn fx:id="pizzaNameColumn" prefWidth="75.0" text="Pizza Name" />
                 <TableColumn fx:id="typeColumn" prefWidth="75.0" text="Type" />
