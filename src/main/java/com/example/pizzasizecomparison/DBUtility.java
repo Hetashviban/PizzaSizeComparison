@@ -1,8 +1,13 @@
 package com.example.pizzasizecomparison;
 
+import javafx.collections.ObservableList;
+import javafx.scene.chart.PieChart;
+
 import java.lang.reflect.Type;
 import java.sql.*;
 import java.util.ArrayList;
+
+import static javafx.collections.FXCollections.observableArrayList;
 
 public class DBUtility {
     private static String dbUser = "Hetashvi200541827";
@@ -39,4 +44,37 @@ public class DBUtility {
         }
         return pizzas;
     }
+
+
+
+    /*This method will return the data from the DB to the pieChart*/
+    public static PieChart.Data[] getPieChartSeries() {
+        ArrayList<PieChart.Data> seriesData = new ArrayList<>();
+
+        String sql = "SELECT Size, COUNT(*) AS NumberOfPizzas " +
+                "FROM godfathers_data " +
+                "GROUP BY Size";
+
+        try (
+                Connection conn = DriverManager.getConnection(connectURL, dbUser, password);
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery(sql);
+        )
+        {
+            while (resultSet.next())
+            {
+                String size = resultSet.getString("Size");
+                int count = resultSet.getInt("NumberOfPizzas");
+                seriesData.add(new PieChart.Data(size, count));
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        // Convert the ArrayList to an array and return
+        return seriesData.toArray(new PieChart.Data[0]);
+    }
+
 }

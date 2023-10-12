@@ -20,7 +20,10 @@ public class ChartViewController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        PieChart.Data[] pieChartSeries = DBUtility.getPieChartSeries();
+        pieChart.getData().addAll(pieChartSeries);
 
+        pieChart.setTitle("Sales according to size of Godfather's pizzeria");
     }
 
     @FXML
