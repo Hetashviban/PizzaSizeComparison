@@ -16,16 +16,20 @@ import java.util.ResourceBundle;
 public class ChartViewController implements Initializable {
 
     @FXML
+    private Label header;
+
+    @FXML
     private PieChart pieChart;
 
+    /*Adding content to the chart using DB*/
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         PieChart.Data[] pieChartSeries = DBUtility.getPieChartSeries();
         pieChart.getData().addAll(pieChartSeries);
 
-        pieChart.setTitle("Sales according to size of Godfather's pizzeria");
     }
 
+    /*Connecting both the scene*/
     @FXML
     void viewTables(ActionEvent event) throws IOException {
         SceneChanger.changeScenes(event, "table-view.fxml");

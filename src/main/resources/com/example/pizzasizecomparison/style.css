@@ -1,13 +1,44 @@
-.root{
+.root {
     -fx-background-image: url(images/background.png);
     -fx-background-size: cover;
     -fx-font-size: 11pt;
+    -fx-font-family: "Arial";
 }
-#header{
-    -fx-font-size: 20px;
-    -fx-font-weight: 700;
+#header {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000;
 }
-.button{
-    -fx-border-radius: 20pt;
-    -fx-background-radius: 20pt;
+.button {
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-background-color: #ed9191;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/*#pieChart {
+/*    -fx-pie-color: #0077B6, #ed9191, #0096C7, #00A7E1, #0077B6;*/
+/*}
+*/
+
+.table-view {
+    -fx-table-cell-border-color: #ed9191;
+}
+
+/* TableColumns Style */
+.table-view .column-header {
+    -fx-background-color: #ed9191;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-view .column {
+    -fx-text-fill: #ed9191;
+}
+
+/* Hover effect on buttons */
+.button:hover {
+    -fx-background-color: #f5baba;
 }

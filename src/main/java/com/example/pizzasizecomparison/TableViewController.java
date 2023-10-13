@@ -35,6 +35,7 @@ public class TableViewController implements Initializable {
 
     private ArrayList<Pizza> allPizzas;
 
+    /*Adding content to the table DB*/
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
@@ -49,6 +50,7 @@ public class TableViewController implements Initializable {
     }
 
 
+    /*Connecting both the scene*/
     @FXML
     void viewCharts(ActionEvent event) throws IOException {
         SceneChanger.changeScenes(event, "chart-view.fxml");
